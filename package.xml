@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>adaptive_component</name>
+  <version>0.2.0</version>
+  <description>
+    A composable container for Adaptive ROS 2 Node computations.
+    Allows building Nodes that can select between FPGA, CPU or
+    GPU, at run-time.
+
+    Technically, provides A ROS 2 Node subclass programmed as a
+    "Component" and including its own single threaded executor
+    to build adaptive computations. Adaptive ROS 2 Nodes are able to
+    perform computations in the CPU, the FPGA or the GPU, adaptively.
+    Adaptive behavior is controlled through the "adaptive" ROS 2
+    parameter.
+  </description>
+  <maintainer email="victorma@xilinx.com">Víctor Mayoral Vilches</maintainer>
+  <license>Apache License 2.0</license>
+  <author email="victorma@xilinx.com">Víctor Mayoral Vilches</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_components</depend>
+  
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
